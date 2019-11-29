@@ -1,0 +1,1 @@
+<img class='{{ .Get "class" }}' src='data:image/png;base64,{{ readFile (.Get "src") | base64Encode }}'>

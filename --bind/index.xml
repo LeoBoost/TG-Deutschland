@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on TG Deutschland</title>
+    <link>http://192.168.2.104:1313/</link>
+    <description>Recent content in Home on TG Deutschland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://192.168.2.104:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Regeln</title>
+      <link>http://192.168.2.104:1313/regeln/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://192.168.2.104:1313/regeln/</guid>
+      <description>Pflegt einen respektvollen und verständnisvollen Umgang mit den anderen MitgliedernAbleismen, Bodyshaming, sowie LGBTQIA*-phobe, rassistische oder sexistische Ausdrücke sind auf unserem Server nicht erwünschtVerfasst eure Beiträge auf DeutschDer Server ist vor allem für Personen aus dem deutschsprachigen Raum. Wir bitten euch also Beiträge auf Deutsch zu verfassen, damit auch alle daran teilhaben können.Das Ansprechen gegenwärtiger Suizidwünsche ist in sämtlichen Channels untersagtEs ist in vergangener Zeit immer wieder dazu gekommen, dass sich Mitglieder bei uns gemeldet haben,die sich aufgrund entsprechender Äußerungen ernsthafte Sorgen um bestimmte Personen gemacht haben.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>http://192.168.2.104:1313/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://192.168.2.104:1313/faq/</guid>
+      <description>Was ist Discord?Discord ist ein kostenloses Programm, welches Nutzern u.a. ermöglicht sich auf „Servern“ zusammenzufinden.Ein Server ist hierbei wie ein modernes Forum zu betrachten, in dem sich Leute, meistens über ein bestimmtes Thema, unterhalten.Dies kann öffentlich auf dem Server oder durch Privatnachrichten geschehen. Sprach- und Videochats sind auf Discord ebenfalls möglich.Wie komme ich auf den Server?1.</description>
+    </item>
+    
+  </channel>
+</rss>

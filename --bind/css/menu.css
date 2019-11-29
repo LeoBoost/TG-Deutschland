@@ -1,0 +1,63 @@
+.menu {
+	list-style:none;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+}
+
+.menu > li {
+	float: left;
+	width: 100px;
+	padding: 4px;
+	position: relative;
+}
+
+.menu > li::before {
+	content: '';
+	position: absolute;
+	left: -5px;
+	width: 2px;
+	height: 80%;
+	top: 10%;
+	background-color: #ffffff;
+}
+
+.menu > li > a {
+	display: flex;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	height: 100%;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.menu > li > a:hover {
+	background-color: #dfdfdf91;
+	background-image: url(../ribbon.svg);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: -10px -10px;
+}
+
+.menu > .active::after {
+	content: '';
+	display: block;
+	position: absolute;
+
+	height: 0;
+	width: 0;
+
+	bottom: 0;
+	left: calc(50% - 15px);
+
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+
+	border-bottom: 15px solid white;
+}
+
+.menu > li > a > div {
+	margin: auto;
+	font-size: 20px;
+}

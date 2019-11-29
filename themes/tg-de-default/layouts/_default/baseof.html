@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ if .Description }}{{ .Description }} | {{ end }}{{ .Site.Title }}</title>
+        <meta name="description" content="{{ .Site.Params.Description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        {{ .Scratch.Add "css" (slice "/css/main.css" "/css/menu.css" "/css/footer.css")}}
+        {{- block "style" . }}
+        {{- end }}
+        {{ partial "css.html" (.Scratch.Get "css") }}
+        {{ .Scratch.Delete "css" }}
+    </head>
+    <body class="background">
+        <div class="content">
+            {{- partial "header.html" . -}}
+            <div class="centre centre-flex">
+                <div class="main-header">
+                    {{- block "main-header" . }}
+                    {{- end }}
+                </div>
+                <div class="page-content">
+                    {{- block "main" . }}
+            
+                    {{- end }}
+                </div>
+                <div class="item"></div>
+            </div>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

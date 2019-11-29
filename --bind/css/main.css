@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+    font-family: AlteDIN;
+    src: url("../fonts/alte-din-1451-mittelschrift.regular.ttf");
+}
+
+html { height: 100%; }
+
+body {
+	font-family: AlteDIN;
+	height: 100%;
+}
+
+br {
+	margin-bottom: 16px;
+}
+
+.box {
+	background-color: #ffffff;
+	margin: 16px;
+	padding: 8px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px 2px #00000033;
+}
+
+.bar {
+	background-color: #00000025;
+	position: relative;
+	width: 70%;
+	height: 3px;
+	bottom: -6px;
+	left: 15%;
+}
+
+.background {
+	background-color: #ffffff;
+}
+
+.header {
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.384);
+	background-color: #38393a;
+	height: 80px;
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.header > object {
+	position: relative;
+	top:0;
+	left:0;
+	height: 100%;
+}
+
+.main-header {
+	overflow: visible;
+	align-content: center;
+}
+
+.main-header > img {
+	width: 100%;
+	bottom: 0;
+	display: block;
+}
+
+.content {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	color: #36363d;
+}
+
+.content > .centre {
+	margin: 0 auto;
+
+	width: calc(100% - 40px);
+	max-width: 1200px;
+}
+
+.content > .footer {
+	margin-top: auto;
+
+	width: 100%;
+	background-color: #38393a;
+	min-height: 160px;
+	box-shadow: inset 0 6px 6px -6px #ffffff;
+}
+
+.centre-flex {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.centre-flex > .item {
+	flex: 1;
+	min-height: 80px;
+}
+
+.centre-flex > .page-content {
+	background-color: #f0f0f0;
+	border-radius: 16px;
+	box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.384);
+	padding: 20px;
+	overflow: visible;
+	z-index: 5;
+}

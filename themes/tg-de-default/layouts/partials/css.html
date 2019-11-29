@@ -1,0 +1,7 @@
+<style>
+	{{ range . }}
+		{{ with resources.Get . | minify }}
+			{{ .Content | safeCSS }}
+		{{ end }}
+	{{ end }}
+</style>

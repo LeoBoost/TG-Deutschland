@@ -1,0 +1,31 @@
+<div class="footer">
+	<!--Menu-->
+	<!--TODO add Children-->
+	<div class="flex">
+		<ul class="footer-menu">
+			{{ $currentPage := . }}
+			{{ range .Site.Menus.footer }}
+				<li class='{{ if $currentPage.IsMenuCurrent "footer" . }}active{{ end }}'>
+					<a href="{{ .URL }}">
+						{{ .Name }}
+					</a>
+				</li>
+			{{ end }}
+		</ul>
+	
+		<div class="impressum">
+			<h4>Impressum</h4>
+			Website von "TG-Deutschland"<br />
+			Betrieben und im Besitz von Lola A.<br />
+			Kontakt: lola@tg-deutschland.org<br />
+			<br />
+			Design von Laila Los<br />
+			Kontakt: laila@tg-deutschland.org
+		</div>
+	</div>
+
+	<div class="bottom-text">
+		Discord Logo von Discord (<a href="https://discordapp.com" target="_blank">discordapp.com</a>)  -  
+		Bilder und Design von Laila Los
+	</div>
+</div>

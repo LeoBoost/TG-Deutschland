@@ -1,0 +1,25 @@
+<div class="header">
+	<a href="/"><object data="/img/logo.svg" type="image/svg+xml"></object></a>
+
+	<label class="menu-button">
+		<input type="checkbox" class="menu-input">
+		<div class="button-wrapper">
+			<div class="menu-button-line"></div>
+		</div>
+		<div class="menu-wrapper">
+			<nav class="menu">
+				<ul>
+				{{ $currentPage := . }}
+				{{ range .Site.Menus.main }}
+					<li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
+						<a href="{{ .URL }}">
+							<div>{{ .Name }}</div>
+						</a>
+					</li>
+				{{ end }}
+				</ul>
+			</nav>
+		</div>
+	</label>
+	
+</div>

@@ -1,0 +1,80 @@
+.title-bar > p > br {
+	margin-bottom: 4px;
+}
+
+.mieps-faq-banner {
+	max-width: 500px;
+	margin: auto;
+}
+
+.title-bar > input {
+	display: none;
+}
+
+.rule > .title-bar:hover {
+	cursor: pointer;
+}
+
+.title-bar > p {
+	display: none;
+	padding: 16px;
+	font-size: 18px;
+	color: #535357;
+}
+
+.title-bar > input:checked ~ p {
+	display: block;
+}
+
+.title-bar > .title > .arrow {
+	pointer-events: none;
+	margin: auto 8px auto 8px;
+	height: 18px;
+}
+
+.title-bar > input:checked ~ .title .down {
+	display: none;
+}
+
+.title-bar > input ~ .title .up {
+	display: none;
+}
+
+.title-bar > input:checked ~ .title .up {
+	display: block;
+}
+
+.title-bar > .title {
+	display: flex;
+	font-size: 20px;
+
+	justify-content: space-between;
+}
+
+.title > .grey {
+	background-color: #00000034;
+}
+
+.title > .blue {
+	background-color: #0099ff7c;
+}
+
+.title > .line {
+	height: 3px;
+	margin: auto 8px auto 8px;
+	min-width: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+	.title > .line {
+		display: none;
+	}
+}
+
+.title > .before {
+	width: 20px;
+}
+
+.title > .after {
+	flex-grow: 1;
+}

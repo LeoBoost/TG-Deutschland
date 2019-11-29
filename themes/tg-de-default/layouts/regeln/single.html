@@ -1,0 +1,11 @@
+{{ define "style" }}
+	{{ .Scratch.Add "css" (slice "/css/regeln.css") }}
+{{ end }}
+
+{{ define "main-header" }}
+	{{ partial "img.html" (dict "class" "" "src" "/img/mieps_regeln.png") }}
+{{ end }}
+
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

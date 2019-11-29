@@ -1,0 +1,11 @@
+{{ define "style" }}
+	{{ .Scratch.Add "css" (slice "/css/index.css") }}
+{{ end }}
+
+{{ define "main-header" }}
+	<img src="/img/banner3.png">
+{{ end }}
+
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

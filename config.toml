@@ -1,0 +1,7 @@
+baseURL = "http://tg-deutschland.org/"
+title = "TG Deutschland"
+theme ="tg-de-default"
+publishDir = "./html"
+
+[params]
+	description = "TG Deutschland ist ein Discord-Server für trans* und questioning Personen aus dem deutschsprachigen Raum"

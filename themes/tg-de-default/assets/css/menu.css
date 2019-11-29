@@ -1,0 +1,179 @@
+.menu, .menu-button, .menu-wrapper {
+	height: 100%;
+}
+
+.menu-button > input {
+	display: none;
+	pointer-events: none;
+}
+
+.menu ul {
+	height: 100%;
+	list-style:none;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+}
+
+.menu li {
+	float: left;
+	width: 100px;
+	height: 100%;
+	padding: 4px;
+	position: relative;
+}
+
+.menu li::before {
+	content: '';
+	position: absolute;
+	left: -5px;
+	width: 2px;
+	height: 80%;
+	top: 10%;
+	background-color: #ffffff;
+}
+
+.menu li > a {
+	display: flex;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	height: 100%;
+	border-radius: 6px;
+	overflow: hidden;
+	margin-right: 5px;
+}
+
+.menu li > a:hover {
+	background-color: #dfdfdf91;
+	background-image: url(/img/ribbon.svg);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: -10px -10px;
+}
+
+.menu .active::after {
+	content: '';
+	display: block;
+	position: absolute;
+
+	height: 0;
+	width: 0;
+
+	bottom: 0;
+	left: calc(50% - 15px);
+
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+
+	border-bottom: 15px solid white;
+}
+
+.menu li > a > div {
+	margin: auto;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/* burger menu */
+@media only screen and (max-width: 750px) {
+	.menu li {
+		max-width: 100px;
+		width: 100%;
+	}
+
+	/* Menu Closed */
+	.menu {
+		bottom: 0px;
+		display: block;
+		background-color: #567B94;
+		width: 100%;
+		height: 100%;
+	}
+
+	.menu-wrapper {
+		position: absolute;
+		overflow: hidden;
+		height: 0;
+		left:0;
+		right:0;
+		top: 80px;
+		z-index: 10;
+
+		transition: height 0.2s;
+	}
+
+	/* Menu Open */
+	.menu-input:checked ~ .menu-wrapper {
+		height: 80px;
+	}
+
+	/* Hamburger menu */
+	.menu-button {
+		margin-right: 12px;
+		width: 54px;
+		height: 54px;
+		background-color: #55cdfc;
+		transition: box-shadow 0.5s;
+		box-shadow: 0 0 0 0 #f7a8b8 inset;
+	}
+
+	/* Mouseover effect */
+	.menu-button:hover {
+		box-shadow: 0 0 0 27px #f7a8b8 inset;
+		cursor: pointer;
+	}
+
+	/* Hamburger Icon lines*/
+	/* Center line */
+	.button-wrapper {
+		position: relative;
+	}
+
+	.menu-button-line {
+		display: block;
+		position: absolute;
+		top: 24px;
+		left: 6px;
+		right: 6px;
+		height: 6px;
+		background-color: white;
+		transition: background 0.4s;
+		z-index: 12;
+	}
+
+	/* Line below and above */
+	.menu-button-line:before,
+	.menu-button-line:after {
+		position: absolute;
+		display: block;
+		left: 0;
+		width: 100%;
+		height: 6px;
+		background-color: white;
+		content: "";
+		transition: transform 0.4s;
+		z-index: 12;
+	}
+
+	.menu-button-line:before {
+		top: -16px;
+	}
+
+	.menu-button-line:after{
+		bottom: -16px;
+	}
+
+	/* Menu open effects */
+	.menu-input:checked + .button-wrapper .menu-button-line{
+		background: none;
+	}
+
+	.menu-input:checked + .button-wrapper .menu-button-line:before{
+		transform: translateY(16px) rotate(45deg);
+	}
+
+	.menu-input:checked + .button-wrapper .menu-button-line:after{
+		transform: translateY(-16px) rotate(-45deg);
+	}
+}
