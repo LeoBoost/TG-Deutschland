@@ -1,0 +1,7 @@
+{{ define "style" }}
+	{{ .Scratch.Add "css" (slice "/css/downloads.css") }}
+{{ end }}
+
+{{ define "main" }}
+{{ .Content }}
+{{ end }}
