@@ -71,8 +71,12 @@
 
 .menu li > a > div {
 	margin: auto;
-	font-size: 1.2em;
+	font-size: 1.25em;
 	font-weight: bold;
+}
+
+.menu li > a > .small {
+	font-size: 1.1em;
 }
 
 /* burger menu */
