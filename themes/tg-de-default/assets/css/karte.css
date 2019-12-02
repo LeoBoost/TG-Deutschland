@@ -4,6 +4,8 @@
 }
 
 .page-content {
+	margin-top: 40px;
+
 	display: grid;
 	grid-template-rows: auto;
 	grid-template-columns: 1fr;
