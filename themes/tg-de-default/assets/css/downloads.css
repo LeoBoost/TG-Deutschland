@@ -5,11 +5,13 @@
 .page-content {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
+	grid-template-rows: auto auto 1fr;
 	grid-gap: 12px 40px;
 	
 	grid-template-areas:
 		"heading heading"
-		"f-left f-right";
+		"fl1 fr"
+		"fl2 fr";
 }
 
 .center {
@@ -36,13 +38,22 @@
 	margin-bottom: 30px;
 }
 
-.page-content > .flyer-left {
-	grid-area: f-left;
+.page-content > .flyer-1 {
 	margin-top: 10%;
+	grid-area: fl1;
+}
+
+.page-content > .flyer-2 {
+	grid-area: fl2;
 }
 
 .page-content > .flyer-right {
-	grid-area: f-right;
+	grid-area: fr;
+	width: 100%;
+}
+
+.flyer-right > a > img {
+	max-width: 100%;
 }
 
 .button {
@@ -94,4 +105,14 @@
 	font-weight: bold;
 	width: 100%;
 	text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+	.page-content {
+		grid-template-areas: 
+		"heading heading"
+		"fl1 fl1"
+		"fr fr"
+		"fl2 fl2";
+	}
 }
