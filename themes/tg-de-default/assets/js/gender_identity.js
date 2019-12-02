@@ -181,6 +181,12 @@ class Slider {
 			this.isDraged = true;
 		}
 	}
+
+	touch() {
+		if(pointBoxCollision(mouse, this.x + (this.width / 2), this.y, this.width / 2, handle_size)) {
+			this.isDraged = true;
+		}
+	}
 }
 
 var mouse = {x:0, y:0};
@@ -190,13 +196,17 @@ function pointBoxCollision(point, boxX, boxY, boxWidth, boxHeight) {
 		&&  Math.abs(boxY - point.y) < (boxHeight));
 }
 
-canvas.addEventListener('mousemove', function(event) {
+function updateMouse(pos) {
 	let rect = canvas.getBoundingClientRect();
-	mouse.x = event.clientX - rect.left;
-	mouse.y = event.clientY - rect.top;
+	mouse.x = pos.x - rect.left;
+	mouse.y = pos.y - rect.top;
 
 	mouse.x = mouse.x / factor;
 	mouse.y = mouse.y / factor;
+}
+
+canvas.addEventListener('mousemove', function(event) {
+	updateMouse({x:event.clientX, y:event.clientY});
 });
 
 window.onresize = updateFactor;
@@ -204,6 +214,41 @@ window.onresize = updateFactor;
 canvas.addEventListener('mousedown', function(event) {
 	sliders.forEach(s => {
 		s.click();
+	});
+});
+
+canvas.addEventListener('touchstart', function(event) {
+	if (event.touches.length > 1) {
+		return;
+	}
+
+	let touch = event.touches[0];
+	updateMouse({x:touch.clientX, y:touch.clientY});
+
+	sliders.forEach(s => {
+		s.touch();
+	});
+	event.preventDefault();
+});
+
+canvas.addEventListener('touchmove', function(event) {
+	if (event.touches.length > 1) {
+		return;
+	}
+
+	let touch = event.touches[0];
+
+	updateMouse({x:touch.clientX, y:touch.clientY});
+	event.preventDefault();
+});
+
+canvas.addEventListener('touchend', function(event) {
+	if (event.touches.length != 0) {
+		return;
+	}
+
+	sliders.forEach(s => {
+		s.isDraged = false;
 	});
 });
 
