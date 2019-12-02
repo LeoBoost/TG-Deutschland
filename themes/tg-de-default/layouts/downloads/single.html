@@ -1,3 +1,7 @@
+{{ define "script" }}
+	{{ .Scratch.Add "js" (slice "/js/gender_identity.js") }}
+{{ end }}
+
 {{ define "style" }}
 	{{ .Scratch.Add "css" (slice "/css/downloads.css") }}
 {{ end }}

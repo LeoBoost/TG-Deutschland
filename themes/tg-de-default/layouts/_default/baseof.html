@@ -30,4 +30,7 @@
             {{- partial "footer.html" . -}}
         </div>
     </body>
+    {{- block "script" . }}
+    {{- end }}
+    {{ partial "script.html" (.Scratch.Get "js") }}
 </html>

@@ -4,14 +4,17 @@
 
 .page-content {
 	display: grid;
-	grid-template-columns: 3fr 2fr;
-	grid-template-rows: auto auto 1fr;
 	grid-gap: 12px 40px;
 	
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: auto 80px auto 80px;
 	grid-template-areas:
 		"heading heading"
 		"fl1 fr"
-		"fl2 fr";
+		"fl2 fr"
+		"gr1 gr1"
+		"gl gl"
+		"gr2 gr2";
 }
 
 .center {
@@ -30,7 +33,7 @@
 	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.295);
 }
 
-.page-content > h1 {
+.page-content > .heading {
 	grid-area: heading;
 	width: 100%;
 	position: relative;
@@ -38,22 +41,37 @@
 	margin-bottom: 30px;
 }
 
-.page-content > .flyer-1 {
-	margin-top: 10%;
+.flyer-1 {
 	grid-area: fl1;
+	overflow: hidden;
 }
 
-.page-content > .flyer-2 {
+.flyer-2 {
 	grid-area: fl2;
 }
 
-.page-content > .flyer-right {
+.flyer-right {
 	grid-area: fr;
 	width: 100%;
 }
 
 .flyer-right > a > img {
 	max-width: 100%;
+}
+
+.g-1 {
+	grid-area: gr1;
+	width: 100%;
+}
+
+.g-2 {
+	grid-area: gr2;
+}
+
+.g-left {
+	grid-area: gl;
+	width: 100%;
+	max-width: 850px;
 }
 
 .button {
@@ -109,10 +127,14 @@
 
 @media only screen and (max-width: 750px) {
 	.page-content {
+		grid-template-rows: auto 80px auto auto 80px;
 		grid-template-areas: 
 		"heading heading"
 		"fl1 fl1"
 		"fr fr"
-		"fl2 fl2";
+		"fl2 fl2"
+		"gr1 gr1"
+		"gl gl"
+		"gr2 gr2";
 	}
 }

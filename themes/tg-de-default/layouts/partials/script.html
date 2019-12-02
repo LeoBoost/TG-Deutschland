@@ -1,0 +1,5 @@
+{{ range . }}
+	{{ with resources.Get . | minify }}
+		<script>{{ .Content | safeJS }}</script>
+	{{ end }}
+{{ end }}
