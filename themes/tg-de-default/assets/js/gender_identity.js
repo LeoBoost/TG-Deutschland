@@ -250,6 +250,8 @@ canvas.addEventListener('touchend', function(event) {
 	sliders.forEach(s => {
 		s.isDraged = false;
 	});
+
+	updateDownload();
 });
 
 document.addEventListener('mouseup', function(event) {
@@ -259,7 +261,11 @@ document.addEventListener('mouseup', function(event) {
 });
 
 canvas.addEventListener('mouseup', function(event) {
+	updateDownload();
+});
+
+function updateDownload() {
 	var img = canvas.toDataURL("image/png");
 	downloadBtn.setAttribute('href', img);
 	downloadBtn.setAttribute('download', "meine_gender_identität.png");
-});
+}
