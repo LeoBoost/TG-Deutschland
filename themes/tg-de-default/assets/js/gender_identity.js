@@ -148,7 +148,7 @@ class Slider {
 		ctx.fillStyle = this.color;
 
 		ctx.beginPath();
-		ctx.moveTo(this.x, this.y);
+		ctx.moveTo(this.sliderPos, this.y);
 		ctx.lineTo(this.x + this.width, this.y);
 		ctx.stroke();
 
