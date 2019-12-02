@@ -1,0 +1,25 @@
+.preview {
+	outline: 1px solid#565758;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.295);
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+	position: relative;
+}
+
+h1 {
+	width: 100%;
+}
+
+.alone {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.page-content {
+	display: grid;
+	grid-template-rows: auto;
+	grid-gap: 12px 40px;
+}
