@@ -1,4 +1,4 @@
-baseURL = "http://tg-deutschland.org/"
+baseURL = "https://tg-deutschland.org/"
 title = "TG Deutschland"
 theme ="tg-de-default"
 publishDir = "./html"
