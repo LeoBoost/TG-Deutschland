@@ -18,8 +18,9 @@
 	font-weight: bold;
 }
 
-
-html { height: 100%; }
+html {
+	height: 100%;
+}
 
 body {
 	font-family: D-DIN;
@@ -29,6 +30,14 @@ body {
 
 p {
 	font-size: 1.2em;
+}
+
+.red {
+	color: red;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .page-content {
@@ -118,7 +127,6 @@ p {
 .centre-flex {
 	display: flex;
 	flex-direction: column;
-
 }
 
 .centre-flex > .item {
