@@ -6,8 +6,8 @@
 				<div class="line before blue"></div>
 				<p>{{ .Get "titel" -}}</p>
 				<div class="line after blue"></div>
-				<object class="arrow up" data="/img/arrow-up.svg" type="image/svg+xml"></object>
-				<object class="arrow down" data="/img/arrow-down.svg" type="image/svg+xml"></object>
+				{{ partial "img.html" (dict "class" "arrow up" "src" "/img/arrow-up.svg" "type" "svg+xml") }}
+				{{ partial "img.html" (dict "class" "arrow down" "src" "/img/arrow-down.svg" "type" "svg+xml") }}
 			</div>
 			<p>
 				{{ .Inner -}}

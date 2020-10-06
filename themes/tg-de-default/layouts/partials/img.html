@@ -1,1 +1,1 @@
-<img class='{{ .class }}' src='data:image/png;base64,{{ readFile (.src) | base64Encode }}'>
+<img class='{{ .class }}' src='data:image/{{.type}};base64,{{ readFile (.src) | base64Encode }}'>
